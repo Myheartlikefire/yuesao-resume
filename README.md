@@ -19,6 +19,28 @@ npm start
 http://localhost:5173
 ```
 
+## GitHub Pages 托管
+
+仓库推送到 GitHub 后，进入：
+
+```text
+Settings -> Pages
+```
+
+选择：
+
+```text
+Source: Deploy from a branch
+Branch: main
+Folder: / (root)
+```
+
+保存后等待 1-3 分钟，页面地址通常是：
+
+```text
+https://myheartlikefire.github.io/yuesao-resume/
+```
+
 ## 换成真实信息
 
 主要改这几个位置：
@@ -30,8 +52,8 @@ http://localhost:5173
 微信分享卡片需要公网 HTTPS 地址。上线后，把 `index.html` 里的：
 
 ```html
-https://example.com/yuesao-resume/
-https://example.com/yuesao-resume/assets/nanny-cover.png
+https://myheartlikefire.github.io/yuesao-resume/
+https://myheartlikefire.github.io/yuesao-resume/assets/nanny-cover.png
 ```
 
 改成真实页面地址和真实图片地址。
