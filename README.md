@@ -1,13 +1,26 @@
-# 微信月嫂简历示例工程
+# 陈陆莲月嫂简历多版本示例
 
-这是一个零依赖静态示例，包含：
+这是一个零依赖静态站点，用来在微信里分享月嫂简历。
 
-- 月嫂简历展示页
-- Open Graph 分享卡片 meta 标签
-- 底部固定按钮：拨打电话、添加微信、发表评价
-- 本地评价演示，评价会保存到浏览器 `localStorage`
+## 页面
 
-## 运行
+- `index.html`：四个简历版本入口
+- `private-a.html`：私单标准版，显示接单工资 13800
+- `private-b.html`：私单图文版，显示接单工资 13800
+- `company-a.html`：公司标准版，不显示价格
+- `company-b.html`：公司图文版，不显示价格
+
+## 内容
+
+页面已加入：
+
+- 宝宝护理照片
+- 营养餐 / 月子餐照片
+- 证书与健康资料照片
+- 服务好评见证照片
+- 底部按钮：拨打电话、添加微信、发表评价
+
+## 本地运行
 
 ```bash
 npm start
@@ -19,43 +32,23 @@ npm start
 http://localhost:5173
 ```
 
-## GitHub Pages 托管
+## 发布后链接
 
-仓库推送到 GitHub 后，进入：
-
-```text
-Settings -> Pages
-```
-
-选择：
+如果继续用 GitHub Pages，四个分享地址是：
 
 ```text
-Source: Deploy from a branch
-Branch: main
-Folder: / (root)
+https://myheartlikefire.github.io/yuesao-resume/private-a.html
+https://myheartlikefire.github.io/yuesao-resume/private-b.html
+https://myheartlikefire.github.io/yuesao-resume/company-a.html
+https://myheartlikefire.github.io/yuesao-resume/company-b.html
 ```
 
-保存后等待 1-3 分钟，页面地址通常是：
+如果换成腾讯云、阿里云或自定义域名，需要把四个 HTML 里的 `og:url` 和 `og:image` 改成新的公网 HTTPS 地址。
 
-```text
-https://myheartlikefire.github.io/yuesao-resume/
-```
+## 修改信息
 
-## 换成真实信息
+- 基本资料、经历、护理内容在 `script.js`
+- 每个版本是否显示价格在对应 HTML 的 `window.RESUME_VARIANT`
+- 图片资源在 `assets/chen-lulian/`
 
-主要改这几个位置：
-
-- `index.html`：姓名、简介、服务经历、证书、报价、OG 标题和描述
-- `script.js`：`contact.phone` 和 `contact.wechat`
-- `assets/nanny-cover.png`：换成真实封面图
-
-微信分享卡片需要公网 HTTPS 地址。上线后，把 `index.html` 里的：
-
-```html
-https://myheartlikefire.github.io/yuesao-resume/
-https://myheartlikefire.github.io/yuesao-resume/assets/nanny-cover.png
-```
-
-改成真实页面地址和真实图片地址。
-
-如果要在微信内自定义转发给好友或朋友圈的标题、封面和链接，还需要接入微信 JS-SDK，并由后端接口生成签名。
+证书和体检资料照片适合做简历展示，正式接单前建议面试时核验原件。
