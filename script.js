@@ -157,7 +157,6 @@ function renderResume() {
           <img src="${asset(variant.layout === "gallery" ? "og-cover.jpg" : "portrait.jpg")}" alt="${resume.name}个人与服务照片" />
         </div>
         <div class="hero-content">
-          <a class="home-link" href="./index.html">${icon("arrow-left")}返回版本入口</a>
           <p class="eyebrow">${variant.badge}</p>
           <h1>${resume.name}</h1>
           <p class="lead">
