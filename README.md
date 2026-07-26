@@ -47,7 +47,7 @@ https://myheartlikefire.github.io/yuesao-resume/company-b.html
 
 ## 修改信息
 
-- 基本资料、经历、护理内容在 `script.js`
+- 基本资料、电话、经历、护理内容在 `script.js`
 - 每个版本是否显示价格在对应 HTML 的 `window.RESUME_VARIANT`
 - 图片资源在 `assets/chen-lulian/`
 

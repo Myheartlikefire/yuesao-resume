@@ -2,10 +2,12 @@ const variant = window.RESUME_VARIANT || { showPrice: true, layout: "classic", b
 
 const resume = {
   name: "陈陆莲",
-  phone: "18320359830",
+  phone: "13536436827",
   age: "46岁",
   hometown: "广东",
+  workPlace: "广东湛江",
   education: "初中",
+  zodiac: "羊",
   height: "158cm",
   weight: "65kg",
   experience: "6年",
@@ -66,7 +68,11 @@ const babyPhotos = [
   ["baby-twins.jpg", "双胞胎宝宝护理"],
   ["baby-care.jpg", "新生儿日常照护"],
   ["baby-stroller.jpg", "户外推车陪护"],
-  ["baby-service.jpg", "医院及家庭服务记录"]
+  ["baby-service.jpg", "医院及家庭服务记录"],
+  ["baby-smile.jpg", "宝宝精神状态记录"],
+  ["baby-sleep.jpg", "宝宝睡眠照护"],
+  ["baby-with-nanny.jpg", "一对一陪护"],
+  ["baby-room.jpg", "家庭上户服务"]
 ];
 
 const mealPhotos = [
@@ -74,20 +80,25 @@ const mealPhotos = [
   ["meal-home-1.jpg", "家常营养餐合集"],
   ["meal-home-2.jpg", "月子餐搭配"],
   ["meal-grid.jpg", "营养餐展示"],
-  ["meal-gallery.jpg", "多样化家常菜"]
+  ["meal-gallery.jpg", "多样化家常菜"],
+  ["meal-more-1.jpg", "清淡家常菜"],
+  ["meal-more-2.jpg", "广东家常菜"]
 ];
 
 const certPhotos = [
   ["certificate-nutrition.jpg", "高级营养师证书"],
   ["certificate-health.jpg", "健康证"],
   ["certificate-checkup.jpg", "体检报告"],
-  ["certificate-skills.jpg", "技能证件合集"]
+  ["certificate-skills.jpg", "技能证件合集"],
+  ["certificate-extra.jpg", "体检补充资料"]
 ];
 
 const proofPhotos = [
   ["service-award.jpg", "双胞胎服务好评见证"],
   ["baby-service.jpg", "医院服务照片"],
-  ["baby-twins.jpg", "龙凤胎护理记录"]
+  ["baby-twins.jpg", "龙凤胎护理记录"],
+  ["proof-newborn.jpg", "宝宝笑脸记录"],
+  ["proof-close.jpg", "亲和陪护记录"]
 ];
 
 function asset(name) {
@@ -166,7 +177,14 @@ function renderResume() {
             <span>${resume.age}</span>
             <span>${resume.experience}经验</span>
             <span>带过${resume.babies}</span>
-            <span>${resume.language}</span>
+            <span>${resume.workPlace}</span>
+            <span>属${resume.zodiac}</span>
+          </div>
+          <div class="profile-facts" aria-label="介绍资料">
+            <div><span>学历</span><strong>${resume.education}</strong></div>
+            <div><span>属相</span><strong>${resume.zodiac}</strong></div>
+            <div><span>工作地点</span><strong>${resume.workPlace}</strong></div>
+            <div><span>语言</span><strong>${resume.language}</strong></div>
           </div>
         </div>
       </section>
@@ -192,6 +210,8 @@ function renderResume() {
               <li><span>姓名</span><strong>${resume.name}</strong></li>
               <li><span>籍贯</span><strong>${resume.hometown}</strong></li>
               <li><span>学历</span><strong>${resume.education}</strong></li>
+              <li><span>属相</span><strong>${resume.zodiac}</strong></li>
+              <li><span>工作地点</span><strong>${resume.workPlace}</strong></li>
               <li><span>身高体重</span><strong>${resume.height} / ${resume.weight}</strong></li>
               <li><span>语言</span><strong>${resume.language}</strong></li>
               <li><span>家庭结构</span><strong>${resume.family}</strong></li>
