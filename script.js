@@ -131,7 +131,7 @@ function renderPrice() {
     <article class="price-panel">
       <span class="panel-label">接单工资</span>
       <strong>¥${variant.wage}</strong>
-      <p>适合私单转发使用。特殊档期、双胞胎、早产儿或特殊护理需求，可电话沟通确认。</p>
+      <p>特殊档期、双胞胎、早产儿或特殊护理需求，可电话沟通确认。</p>
     </article>
   `;
 }
@@ -140,9 +140,9 @@ function renderNoPriceNote() {
   if (variant.showPrice) return "";
   return `
     <article class="note-panel">
-      <span class="panel-label">公司推荐版</span>
-      <strong>不显示价格</strong>
-      <p>适合机构统一报价、统一面试安排和公司渠道转发。</p>
+      <span class="panel-label">服务沟通</span>
+      <strong>面议</strong>
+      <p>具体服务安排、档期和护理需求，可电话沟通确认。</p>
     </article>
   `;
 }
@@ -181,7 +181,7 @@ function renderResume() {
         </div>
       </section>
 
-      ${variant.layout === "gallery" ? gallery("服务照片", "宝宝护理、双胞胎服务和好评见证优先展示，适合图文转发。", proofPhotos, "gallery-first") : ""}
+      ${variant.layout === "gallery" ? gallery("服务照片", "宝宝护理、双胞胎服务和好评见证展示。", proofPhotos, "gallery-first") : ""}
 
       <section class="content-section">
         <div class="two-column">
@@ -268,7 +268,7 @@ function renderResume() {
       <section class="section-band">
         <div class="section-heading">
           <h2>好评见证</h2>
-          <p>以下为根据服务记录整理的匿名评价摘要，方便转发时快速了解服务特点。</p>
+          <p>以下为根据服务记录整理的匿名评价摘要。</p>
         </div>
         <div class="reviews-list" id="reviewsList">
           ${resume.reviews.map((review) => `
