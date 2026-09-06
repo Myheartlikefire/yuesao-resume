@@ -5,18 +5,18 @@ const resume = {
   phone: "13536436827",
   age: "46岁",
   hometown: "广东",
-  workPlace: "广东湛江",
+  workPlace: "广东省内",
   education: "初中",
   zodiac: "羊",
   height: "158cm",
   weight: "65kg",
   experience: "6年",
-  babies: "15个宝宝",
+  babies: "15+个宝宝",
   language: "粤语、国语、涯话",
   family: "一家五口",
   intro:
     "为人诚实，能吃苦耐劳，有爱心，执行力强，脾气好，说话柔，有耐心，热爱母婴护理工作。服务中重视宝妈情绪沟通，也会细致记录宝宝喂养、睡眠、排便和护理情况。",
-  certificates: ["高级催乳证", "高级月嫂证", "育婴师证", "家庭调理师证", "健康证及体检报告"],
+  certificates: ["高级催乳证", "高级月嫂证", "高级营养师证", "育婴师证", "家庭调理师证", "健康证及体检报告"],
   cooking:
     "擅长粤菜、家常菜、婴幼儿辅食、营养粥、各类月子餐和煲汤，菜色多样，注重清淡、均衡和阶段性营养搭配。",
   work: [
@@ -32,7 +32,8 @@ const resume = {
     "2025年9月 廉江锦绣华景 26天",
     "2026年2月 廉江石城镇 26天",
     "2026年4月 碧桂园盛世名门 26天",
-    "2026年5月 廉江市石城镇高桥村龙凤胎 52天"
+    "2026年5月 廉江市石城镇高桥村龙凤胎 52天",
+    "2026年8月 廉江市吉水镇 26天"
   ],
   maternalCare: [
     "会阴消毒护理、恶露观察、产后清洁擦身、产妇衣物清洗消毒。",
@@ -72,7 +73,15 @@ const babyPhotos = [
   ["baby-smile.jpg", "宝宝精神状态记录"],
   ["baby-sleep.jpg", "宝宝睡眠照护"],
   ["baby-with-nanny.jpg", "一对一陪护"],
-  ["baby-room.jpg", "家庭上户服务"]
+  ["baby-room.jpg", "家庭上户服务"],
+  ["baby-newborn-touch-care.jpg", "新生儿抚触护理"],
+  ["baby-full-month-award-group.jpg", "宝宝满月服务纪念"],
+  ["baby-full-month-care.jpg", "满月宝宝陪护合影"],
+  ["baby-newborn-portrait.jpg", "新生儿抱护记录"],
+  ["baby-care-award-display.jpg", "金牌月嫂服务奖杯"],
+  ["baby-home-care-selfie.jpg", "居家母婴陪护"],
+  ["baby-bedside-care.jpg", "宝宝卧床陪护"],
+  ["baby-care-award-closeup.jpg", "金牌月嫂荣誉见证"]
 ];
 
 const mealPhotos = [
@@ -82,7 +91,11 @@ const mealPhotos = [
   ["meal-grid.jpg", "营养餐展示"],
   ["meal-gallery.jpg", "多样化家常菜"],
   ["meal-more-1.jpg", "清淡家常菜"],
-  ["meal-more-2.jpg", "广东家常菜"]
+  ["meal-more-2.jpg", "广东家常菜"],
+  ["meal-balanced-set.jpg", "荤素搭配营养餐"],
+  ["meal-spiced-shrimp.jpg", "椒盐鲜虾"],
+  ["meal-pork-ginger-eggs.jpg", "猪脚姜醋蛋"],
+  ["meal-bitter-melon-pork.jpg", "苦瓜炒肉片"]
 ];
 
 const certPhotos = [
@@ -142,7 +155,7 @@ function renderPrice() {
     <article class="price-panel">
       <span class="panel-label">接单工资</span>
       <strong>¥${variant.wage}</strong>
-      <p>特殊档期、双胞胎、早产儿或特殊护理需求，可电话沟通确认。</p>
+      <p>特殊档期、双胞胎、早产儿等特殊护理需求，价格请电话沟通商量。</p>
     </article>
   `;
 }
@@ -180,19 +193,14 @@ function renderResume() {
             <span>${resume.workPlace}</span>
             <span>属${resume.zodiac}</span>
           </div>
-          <div class="profile-facts" aria-label="介绍资料">
-            <div><span>学历</span><strong>${resume.education}</strong></div>
-            <div><span>属相</span><strong>${resume.zodiac}</strong></div>
-            <div><span>工作地点</span><strong>${resume.workPlace}</strong></div>
-            <div><span>语言</span><strong>${resume.language}</strong></div>
-          </div>
+          ${renderPrice()}
         </div>
       </section>
 
       <section class="section-band">
         <div class="summary-grid">
           <article class="metric"><span class="metric-value">${resume.experience}</span><span class="metric-label">服务经验</span></article>
-          <article class="metric"><span class="metric-value">15</span><span class="metric-label">服务宝宝</span></article>
+          <article class="metric"><span class="metric-value">15+</span><span class="metric-label">服务宝宝</span></article>
           <article class="metric"><span class="metric-value">46</span><span class="metric-label">当前年龄</span></article>
           <article class="metric"><span class="metric-value">52天</span><span class="metric-label">龙凤胎服务</span></article>
         </div>
@@ -218,7 +226,6 @@ function renderResume() {
             </ul>
           </div>
           <div class="stack-panels">
-            ${renderPrice()}
             ${renderNoPriceNote()}
             <article class="contact-panel">
               <span class="panel-label">联系电话</span>
